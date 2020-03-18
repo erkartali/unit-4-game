@@ -1,0 +1,40 @@
+.container { 
+    margin: 20px;
+}
+
+p {
+    margin: 5px;
+}
+
+.red {
+    background-image: url('../images/red-gem.png');
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.blue {
+    background-image: url('../images/blue-gem.jpeg');
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.yellow {
+    background-image: url('../images/yellow-gem.jpeg');
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.green {
+    background-image: url('../images/green-gem.jpeg');
+    height: 75px;
+    width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
