@@ -7,16 +7,17 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Flamenco|Red+Hat+Display|Rye&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Gem Game</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container text-center">
 
         <div class="container title">
-            <h1>Crystal Collector</h1>
+            <h1 row justify-content-center>Crystal Collector</h1>
         </div> 
 
         <div class="container instructions">
@@ -29,25 +30,34 @@
 
         <div class="container info d-md-flex">
             <div class="container">
-                <span class="target"></span>
+                <p>Target : </p>
+                <span class="target">Target: </span>
             </div>
-            <div class="container winsandlosses">
-                <p class="wins">0</p>
-                <p class="losses">0</p>
+            <div class="container winsandlosses d-md-flex ">
+                <div class="container">
+                    <p>Wins :</p>
+                    <span class="wins">0</span>
+                </div>
+                <div class="container">
+                    <p>Losses :</p>
+                    <span class="losses">0</span>
+                </div>
             </div>
         </div>
 
         <div class="container gems d-flex">
-            <div class="container red" data-myValue=""></div>
-            <div class="container blue"></div>
-            <div class="container yellow"></div>
-            <div class="container green"></div>
+            <div class="container d-md-flex">
+                <div class="container red" data-myValue=""></div>
+                <div class="container blue" data-myValue=""></div>
+            </div>
+            <div class="container d-md-flex">
+                <div class="container yellow" data-myValue=""></div>
+                <div class="container green" data-myValue=""></div>
+            </div>
         </div>
 
         <div class="container">
-            <h5>Your total score is:</h5>
-        </div>
-        <div class="container">
+            <p>Your total score is : </p>
             <span class="total">0</span>
         </div>
 

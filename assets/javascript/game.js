@@ -11,12 +11,36 @@ var greenNum = Math.floor(Math.random() * 12) + 1;
 console.log('greennum:', greenNum);
 console.log('targetnum:', targetNum);
 
-var totalScore = "";
-var totalScoreHTML = $('total');
+var totalScore = 0;
+var totalScoreHTML = $('.total');
+
+var wins = 0;
+var winsHTML = $('.wins');
+var losses = 0;
+var lossesHTML = $('.losses')
 
 
 var randomize = () => {
     $(targetNumHTML).html(targetNum);
+}
+
+var reset = () => {
+    totalScore = 0;
+    randomize()
+}
+
+var alerts = () => {
+    if (totalScore === targetNum) {
+        setTimeout(() => { alert("You win player!") }, 500);
+        wins++
+        winsHTML.text(wins);
+        reset();
+    } else if (totalScore > targetNum) {
+        alert("You didn't math right!")
+        losses++
+        lossesHTML.html(losses);
+        reset();
+    }
 }
 
 var randomizeGems = () => {
@@ -37,15 +61,56 @@ randomizeGems();
 var addNums = () => {
 
     $( ".red" ).click(function() {
-        // totalScore = $('.red').attr('data-myValue');
 
         var clickNum = $('.red').attr('data-myValue');
         var parsedClickNum = parseInt(clickNum);
+        console.log(totalScore);
+        totalScore += parsedClickNum;
 
-        console.log(parsedClickNum);
-        var totalOfBoth = totalScore + parsedClickNum;
-
-        console.log('total score:', totalOfBoth);
+        console.log('total score:', totalScore);
+        $(totalScoreHTML).html(totalScore);
+        // alerts();
       });
+    $( ".blue" ).click(function() {
+
+        var clickNum = $('.blue').attr('data-myValue');
+        var parsedClickNum = parseInt(clickNum);
+        console.log(totalScore);
+        totalScore += parsedClickNum;
+
+        console.log('total score:', totalScore);
+        $(totalScoreHTML).html(totalScore);
+        // alerts();
+      });
+    $( ".yellow" ).click(function() {
+
+        var clickNum = $('.yellow').attr('data-myValue');
+        var parsedClickNum = parseInt(clickNum);
+        console.log(totalScore);
+        totalScore += parsedClickNum;
+
+        console.log('total score:', totalScore);
+        $(totalScoreHTML).html(totalScore);
+        // alerts();
+      });
+    $( ".green" ).click(function() {
+
+        var clickNum = $('.green').attr('data-myValue');
+        var parsedClickNum = parseInt(clickNum);
+        console.log(totalScore);
+        totalScore += parsedClickNum;
+
+        console.log('total score:', totalScore);
+        $(totalScoreHTML).html(totalScore);
+        // alerts();
+      });
+      $(totalScoreHTML).html(totalScore);
+      alerts();
+      
+
 }
 addNums()
+
+console.log(totalScore)
+console.log(targetNum)
+
