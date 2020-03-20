@@ -41,39 +41,45 @@ p {
 
 }
 
-.red {
-    background-image: url('../images/red2.png');
+.imgpar {
+    overflow: hiddem;
     height: 100px;
     width: 100px;
+}
+
+.crystal {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+    height: 100%;
+    width: 100%;
+    transition: all 1s;
+}
+
+.red {
+    background-image: url('../images/red2.png'); 
 }
 .blue {
     background-image: url('../images/blue2.png');
-    height: 100px;
-    width: 100px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
 }
 .yellow {
     background-image: url('../images/yellow2.png');
-    height: 100px;
-    width: 100px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
 }
 .green {
     background-image: url('../images/green-gem.png');
     height: 75px;
     width: 75px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
+}
+.red:hover {
+    transform: scale(1.2);
+}
+.blue:hover {
+    transform: scale(1.2);
+}
+.yellow:hover {
+    transform: scale(1.2);
+}
+.green:hover {
+    transform: scale(1.2);
 }
