@@ -11,6 +11,7 @@ body {
 h1 {
     font-size: 40px;
     color: gold;
+    margin-top: 30px;
 }
 
 span, .target {

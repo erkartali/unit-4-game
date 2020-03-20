@@ -21,22 +21,29 @@ var lossesHTML = $('.losses')
 
 
 var randomize = () => {
+    targetNum = Math.floor(Math.random() * 101) + 19;
+    redNum = Math.floor(Math.random() * 12) + 1;
+    blueNum = Math.floor(Math.random() * 12) + 1;
+    yellowNum = Math.floor(Math.random() * 12) + 1;
+    greenNum = Math.floor(Math.random() * 12) + 1;
+    totalScore = 0;
+    $(totalScoreHTML).html(totalScore);
     $(targetNumHTML).html(targetNum);
 }
 
 var reset = () => {
     totalScore = 0;
-    randomize()
+    randomize();
 }
 
 var alerts = () => {
     if (totalScore === targetNum) {
-        setTimeout(() => { alert("You win player!") }, 500);
+        alert("You win!");
         wins++
         winsHTML.text(wins);
         reset();
     } else if (totalScore > targetNum) {
-        alert("You didn't math right!")
+        alert("You didn't math right!");
         losses++
         lossesHTML.html(losses);
         reset();
@@ -69,8 +76,9 @@ var addNums = () => {
 
         console.log('total score:', totalScore);
         $(totalScoreHTML).html(totalScore);
-        // alerts();
+        alerts();
       });
+      
     $( ".blue" ).click(function() {
 
         var clickNum = $('.blue').attr('data-myValue');
@@ -80,7 +88,7 @@ var addNums = () => {
 
         console.log('total score:', totalScore);
         $(totalScoreHTML).html(totalScore);
-        // alerts();
+        alerts();
       });
     $( ".yellow" ).click(function() {
 
@@ -91,7 +99,7 @@ var addNums = () => {
 
         console.log('total score:', totalScore);
         $(totalScoreHTML).html(totalScore);
-        // alerts();
+        alerts();
       });
     $( ".green" ).click(function() {
 
@@ -102,10 +110,10 @@ var addNums = () => {
 
         console.log('total score:', totalScore);
         $(totalScoreHTML).html(totalScore);
-        // alerts();
+        alerts();
       });
       $(totalScoreHTML).html(totalScore);
-      alerts();
+    //   alerts();
       
 
 }
