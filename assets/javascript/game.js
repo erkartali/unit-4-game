@@ -49,10 +49,10 @@ var randomizeGems = () => {
     $('.blue').attr('data-myValue', blueNum);
     $('.yellow').attr('data-myValue', yellowNum);
     $('.green').attr('data-myValue', greenNum);
-    console.log('red gem value:' ,$('.red').attr('data-myValue'));
-    console.log('blue gem value:' ,$('.blue').attr('data-myValue'));
-    console.log('yellow gem value:' ,$('.yellow').attr('data-myValue'));
-    console.log('green gem value:' ,$('.green').attr('data-myValue'));
+    // console.log('red gem value:' ,$('.red').attr('data-myValue'));
+    // console.log('blue gem value:' ,$('.blue').attr('data-myValue'));
+    // console.log('yellow gem value:' ,$('.yellow').attr('data-myValue'));
+    // console.log('green gem value:' ,$('.green').attr('data-myValue'));
 }
 
 randomize();
@@ -68,7 +68,7 @@ var addNums = () => {
         console.log(totalScore);
         totalScore += parsedClickNum;
 
-        console.log('total score:', totalScore);
+        // console.log('total score:', totalScore);
         $(totalScoreHTML).html(totalScore);
         alerts();
       });
