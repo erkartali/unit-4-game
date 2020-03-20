@@ -2,14 +2,9 @@ var targetNum = Math.floor(Math.random() * 101) + 19;
 var targetNumHTML = $('.target')
 
 var redNum = Math.floor(Math.random() * 12) + 1;
-console.log('rednum: ', redNum);
 var blueNum = Math.floor(Math.random() * 12) + 1;
-console.log('bluenum:', blueNum);
 var yellowNum = Math.floor(Math.random() * 12) + 1;
-console.log('yellownum:', yellowNum);
 var greenNum = Math.floor(Math.random() * 12) + 1;
-console.log('greennum:', greenNum);
-console.log('targetnum:', targetNum);
 
 var totalScore = 0;
 var totalScoreHTML = $('.total');
@@ -22,17 +17,16 @@ var lossesHTML = $('.losses')
 
 var randomize = () => {
     targetNum = Math.floor(Math.random() * 101) + 19;
+    $(targetNumHTML).html(targetNum);
     redNum = Math.floor(Math.random() * 12) + 1;
     blueNum = Math.floor(Math.random() * 12) + 1;
     yellowNum = Math.floor(Math.random() * 12) + 1;
     greenNum = Math.floor(Math.random() * 12) + 1;
     totalScore = 0;
     $(totalScoreHTML).html(totalScore);
-    $(targetNumHTML).html(targetNum);
 }
 
 var reset = () => {
-    totalScore = 0;
     randomize();
 }
 
@@ -66,44 +60,10 @@ randomizeGems();
 
 
 var addNums = () => {
-
-    $( ".red" ).click(function() {
-
-        var clickNum = $('.red').attr('data-myValue');
-        var parsedClickNum = parseInt(clickNum);
-        console.log(totalScore);
-        totalScore += parsedClickNum;
-
-        console.log('total score:', totalScore);
-        $(totalScoreHTML).html(totalScore);
-        alerts();
-      });
       
-    $( ".blue" ).click(function() {
+    $( ".crystal" ).click(function() {
 
-        var clickNum = $('.blue').attr('data-myValue');
-        var parsedClickNum = parseInt(clickNum);
-        console.log(totalScore);
-        totalScore += parsedClickNum;
-
-        console.log('total score:', totalScore);
-        $(totalScoreHTML).html(totalScore);
-        alerts();
-      });
-    $( ".yellow" ).click(function() {
-
-        var clickNum = $('.yellow').attr('data-myValue');
-        var parsedClickNum = parseInt(clickNum);
-        console.log(totalScore);
-        totalScore += parsedClickNum;
-
-        console.log('total score:', totalScore);
-        $(totalScoreHTML).html(totalScore);
-        alerts();
-      });
-    $( ".green" ).click(function() {
-
-        var clickNum = $('.green').attr('data-myValue');
+        var clickNum = $(this).attr('data-myValue');
         var parsedClickNum = parseInt(clickNum);
         console.log(totalScore);
         totalScore += parsedClickNum;
@@ -113,12 +73,7 @@ var addNums = () => {
         alerts();
       });
       $(totalScoreHTML).html(totalScore);
-    //   alerts();
-      
-
+    
 }
 addNums()
-
-console.log(totalScore)
-console.log(targetNum)
 
