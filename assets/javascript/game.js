@@ -65,7 +65,7 @@ var addNums = () => {
 
         var clickNum = $(this).attr('data-myValue');
         var parsedClickNum = parseInt(clickNum);
-        console.log(totalScore);
+        // console.log(totalScore);
         totalScore += parsedClickNum;
 
         // console.log('total score:', totalScore);
